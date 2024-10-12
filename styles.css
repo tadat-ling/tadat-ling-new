@@ -196,45 +196,16 @@ body {
   margin-bottom: 100px;
 }
 
-/* Make the website responsive for mobile and smaller screens */
+/* Mobile screen style (for screens smaller than 768px) */
 @media (max-width: 768px) {
-  /* Make navigation menu vertical */
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
+    nav ul {
+        display: block; /* Stack the items vertically */
+        text-align: center;
+    }
 
-  nav ul li {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  /* Adjust body font size for mobile */
-  body {
-    font-size: 16px;
-    padding: 0 10px;
-  }
-
-  /* Adjust header and section padding for mobile */
-  header {
-    padding: 15px 0; /* Reduce padding for smaller screens */
-  }
-
-  h1 {
-    font-size: 30px; /* Reduce heading size for smaller screens */
-  }
-
-  h2 {
-    font-size: 24px;
-  }
-
-  section {
-    padding: 15px; /* Reduce padding for mobile */
-  }
-
-  /* Ensure images scale properly on smaller screens */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0; /* Add space between the items */
+    }
 }

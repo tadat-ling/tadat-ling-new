@@ -1,0 +1,237 @@
+/* General body styling */
+body {
+  font-family: 'Garamond', serif; /* Alternatively, 'Times New Roman', serif */
+  font-size: 18px; /* Keep the increased font size */
+  margin: 0;
+  padding: 0;
+  line-height: 1.75;
+  color: #ffffff;
+}
+
+/* Navigation bar styling */
+nav {
+  background-color: #ffffff;
+  padding: 10px 0; /* Reduced padding to make the navbar more compact */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: #575757;
+  border-radius: 4px;
+}
+
+/* Header Section */
+header {
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 20px 0; /* Reduced padding to decrease the vertical space */
+}
+
+h1 {
+  font-size: 36px;
+  margin-top: 10px; /* Reduce space above the title */
+}
+
+h2 {
+  font-size: 28px;
+}
+
+/* Section padding and margins */
+section {
+  padding: 20px 40px; /* Reduced vertical padding */
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+/* YouTube Video */
+.video-container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    margin: 50px 20px 100px; /* 上下距离 30px，底部距离 footer 100px */
+}
+
+.embed-container {
+    position: relative;
+    max-width: 100%;
+    width: 800px;
+    height: 450px;
+    margin: auto; /* 添加这行以实现水平居中 */
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 搜索条样式 */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto; /* 使用 auto 确保居中对齐 */
+    width: 70%; /* 设定相同的宽度 */
+}
+
+.search-bar input {
+    width: 100%; /* 让输入框充满 search-bar 容器 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #2c2c2c;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 帖子样式 */
+.posts {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto; /* 与 search-bar 相同 */
+    width: 70%; /* 确保 posts 容器宽度与 search-bar 一致 */
+}
+
+.post {
+    display: flex;
+    width: 100%; /* 让 post 元素充满 posts 容器 */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.post-image {
+    width: 150px; /* 或者您希望的宽度 */
+    height: auto;
+    margin-right: 15px;
+    border-radius: 8px; /* 添加圆角 */
+}
+
+.post-content {
+    flex: 1; /* 允许内容扩展 */
+}
+
+.post-link {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c2c2c;
+    text-decoration: none;
+}
+
+.post-meta {
+    margin-top: 5px;
+}
+
+.post-time {
+    font-size: 12px;
+    color: #666;
+}
+
+.post-excerpt {
+    font-size: 14px;
+}
+
+/* 分页样式 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 20px 100px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #2c2c2c;
+}
+
+
+#about p, #publications p {
+  margin-bottom: 20px;
+}
+
+/* Footer styling */
+footer {
+  background-color: #2c2c2c;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 10;
+}
+
+body {
+  margin-bottom: 100px;
+}
+
+/* Make the website responsive for mobile and smaller screens */
+@media (max-width: 768px) {
+  /* Make navigation menu vertical */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  /* Adjust body font size for mobile */
+  body {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  /* Adjust header and section padding for mobile */
+  header {
+    padding: 15px 0; /* Reduce padding for smaller screens */
+  }
+
+  h1 {
+    font-size: 30px; /* Reduce heading size for smaller screens */
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  section {
+    padding: 15px; /* Reduce padding for mobile */
+  }
+
+  /* Ensure images scale properly on smaller screens */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}

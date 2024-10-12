@@ -28,17 +28,17 @@
     <h1>Resource</h1>
   </header>
 
-  <!-- Resource Content Section -->
-  <section id="resource">
-        <div id="posts">
-            <!-- Thanh tìm kiếm -->
-            <div class="search-bar">
-                <input type="text" placeholder="Search..." aria-label="Search">
-                <button type="submit">Search</button>
-            </div>
-            <!-- Bắt đầu phần post -->
-            <div id="resource-content">
-                <div class="post">
+<!-- Resource Content Section -->
+<section id="resource">
+    <div id="posts">
+        <!-- Thanh tìm kiếm -->
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search..." aria-label="Search">
+            <button type="submit" onclick="searchPosts()">Search</button>
+        </div>
+        <!-- Bắt đầu phần post -->
+        <div id="resource-content">
+            <div class="post" data-tags="demo, javascript, html">
                 <div class="post-content">
                     <a href="demo.html" class="post-link">Demo</a>
                     <div class="post-meta">
@@ -47,19 +47,92 @@
                     <p class="post-excerpt">Abstract of this post...</p>
                 </div>
             </div>
+            <div class="post" data-tags="css, frontend, web design">
+                <div class="post-content">
+                    <a href="css_tutorial.html" class="post-link">CSS Tutorial</a>
+                    <div class="post-meta">
+                        <span class="post-time">Posted on: 01/10/2024</span>
+                    </div>
+                    <p class="post-excerpt">Learn how to style websites with CSS...</p>
+                </div>
             </div>
+            <!-- Thêm nhiều post khác ở đây -->
         </div>
-            <!-- Thêm nhiều post tương tự ở đây -->
-            <!-- Cuối cùng thêm thanh phân trang -->
-            <div class="pagination">
-                <a href="#">&laquo;</a>
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">&raquo;</a>
-            </div>
-        </div>
-    </section>
+    </div>
+    <!-- Thêm phân trang -->
+    <div class="pagination">
+        <a href="#" onclick="prevPage()">&laquo;</a>
+        <a href="#" onclick="goToPage(1)">1</a>
+        <a href="#" onclick="goToPage(2)">2</a>
+        <a href="#" onclick="goToPage(3)">3</a>
+        <a href="#" onclick="nextPage()">&raquo;</a>
+    </div>
+</section>
+
+<script>
+    let currentPage = 1;
+    const postsPerPage = 10; // Số lượng bài viết mỗi trang
+    let totalPosts;
+    let totalPages;
+
+    document.addEventListener('DOMContentLoaded', () => {
+        totalPosts = document.querySelectorAll('.post').length;
+        totalPages = Math.ceil(totalPosts / postsPerPage);
+        showPage(currentPage);
+    });
+
+    function showPage(page) {
+        const posts = document.querySelectorAll('.post');
+        posts.forEach((post, index) => {
+            post.style.display = (index >= (page - 1) * postsPerPage && index < page * postsPerPage) ? 'block' : 'none';
+        });
+    }
+
+    function goToPage(page) {
+        if (page >= 1 && page <= totalPages) {
+            currentPage = page;
+            showPage(page);
+        }
+    }
+
+    function prevPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            showPage(currentPage);
+        }
+    }
+
+    function nextPage() {
+        if (currentPage < totalPages) {
+            currentPage++;
+            showPage(currentPage);
+        }
+    }
+
+    // Chức năng tìm kiếm kết hợp với phân trang
+    function searchPosts() {
+        let input = document.getElementById('search-input').value.toLowerCase();
+        let posts = document.querySelectorAll('.post');
+
+        posts.forEach(post => {
+            // Lấy các tag từ thuộc tính data-tags
+            let tags = post.getAttribute('data-tags').toLowerCase();
+            // Lấy nội dung bài viết
+            let content = post.querySelector('.post-content').innerText.toLowerCase();
+
+            // Kiểm tra nếu từ khóa có trong nội dung hoặc thẻ
+            if (content.includes(input) || tags.includes(input)) {
+                post.style.display = "block"; // Hiển thị bài viết
+            } else {
+                post.style.display = "none";  // Ẩn bài viết
+            }
+        });
+    }
+
+    // Thêm sự kiện tìm kiếm tự động khi người dùng gõ phím
+    document.getElementById('search-input').addEventListener('keyup', searchPosts);
+</script>
+
 
   <!-- Footer Section -->
   <footer>

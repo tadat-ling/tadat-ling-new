@@ -132,7 +132,7 @@ section {
 }
 
 .post-image {
-    width: 15px; /* 或者您希望的宽度 */
+    width: 50px; /* 或者您希望的宽度 */
     height: auto;
     margin-right: 15px;
     border-radius: 8px; /* 添加圆角 */

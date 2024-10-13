@@ -64,7 +64,7 @@ section {
   padding: 20px 40px 100px; /* 添加空间 */
   background-color: #ffffff; 
   font-size: 18px;
-  max-width: 66.67%; /* 内容占据屏幕的 2/3 */
+  max-width: 50%; /* 内容占据屏幕的 1/2 */
   margin: 0 auto; /* 自动左右居中 */
 }
 
@@ -97,7 +97,7 @@ section {
     display: flex;
     justify-content: center;
     margin: 20px auto; /* 使用 auto 确保居中对齐 */
-    width: 70%; /* 设定相同的宽度 */}
+    width: 50%; /* 设定相同的宽度 */}
 
 .search-bar input {
     width: 100%; /* 让输入框充满 search-bar 容器 */
@@ -110,7 +110,7 @@ section {
     display: flex;
     justify-content: center;
     margin: 20px auto; /* 与 search-bar 相同 */
-    width: 70%; /* 确保 posts 容器宽度与 search-bar 一致 */}
+    width: 50%; /* 确保 posts 容器宽度与 search-bar 一致 */}
 
 .post {
     display: flex;
@@ -171,7 +171,7 @@ body {
 /* Mobile screen style (for screens smaller than 1200px and 768px) */
 @media (max-width: 1200px) {
   section {
-    max-width: 90%; /* 在较小屏幕上，内容占据 90% 的宽度 */
+    max-width: 80%; /* 在较小屏幕上，内容占据 80% 的宽度 */
   }
 }
 
@@ -188,8 +188,7 @@ body {
     }
     
     section {
-    max-width: 100%; /* 在移动设备上，内容占据 100% 的宽度 */
-    padding: 10px 20px; /* 减少内边距 */
+    max-width: 90%; /* 在移动设备上，内容占据 90% 的宽度 */
   }
     
 }

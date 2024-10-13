@@ -126,16 +126,9 @@ section {
     display: flex;
     width: 100%; /* 让 post 元素充满 posts 容器 */
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
-}
-
-.post-image {
-    width: 50px; /* 或者您希望的宽度 */
-    height: auto;
-    margin-right: 15px;
-    border-radius: 8px; /* 添加圆角 */
 }
 
 .post-content {
@@ -170,7 +163,7 @@ section {
 }
 
 .pagination a {
-    margin: 0 5px;
+    margin: 0 10px;
     text-decoration: none;
     color: #2c2c2c;
 }

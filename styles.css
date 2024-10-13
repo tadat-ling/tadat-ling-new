@@ -64,6 +64,8 @@ section {
   padding: 20px 40px 100px; /* 添加空间 */
   background-color: #ffffff; 
   font-size: 18px;
+  max-width: 66.67%; /* 内容占据屏幕的 2/3 */
+  margin: 0 auto; /* 自动左右居中 */
 }
 
 /* YouTube Video */
@@ -166,7 +168,13 @@ footer {
 body {
   margin-bottom: 100px;}
 
-/* Mobile screen style (for screens smaller than 768px) */
+/* Mobile screen style (for screens smaller than 1200px and 768px) */
+@media (max-width: 1200px) {
+  section {
+    max-width: 90%; /* 在较小屏幕上，内容占据 90% 的宽度 */
+  }
+}
+
 @media (max-width: 768px) {
     nav ul {
         display: block; /* Stack the items vertically */
@@ -178,4 +186,10 @@ body {
         text-align: center;
         margin: 10px 0; /* Add space between the items */
     }
+    
+    section {
+    max-width: 100%; /* 在移动设备上，内容占据 100% 的宽度 */
+    padding: 10px 20px; /* 减少内边距 */
+  }
+    
 }

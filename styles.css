@@ -102,9 +102,10 @@ section {
 .search-bar input {
     width: 100%; /* 让输入框充满 search-bar 容器 */
     padding: 10px;
-    border: 1px solid #e1dbcd;
+    border: 1px solid #ddd;
     background-color: #f9f8f5; 
-    border-radius: 4px;}
+    border-radius: 7px;
+    color: #363127;}
 
 /* 帖子样式 */
 .posts {
@@ -116,9 +117,9 @@ section {
 .post {
     display: flex;
     width: 100%; /* 让 post 元素充满 posts 容器 */
-    border: 1px solid #e1dbcd;
+    border: 1px solid #ddd;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 7px;
     margin-bottom: 20px;}
 
 .post-content {

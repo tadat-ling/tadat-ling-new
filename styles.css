@@ -96,7 +96,7 @@ section {
 .search-bar {
     display: flex;
     justify-content: center;
-    margin: 20px auto; /* 使用 auto 确保居中对齐 */
+    margin: 20px auto;
     width: 50%; /* 设定相同的宽度 */}
 
 .search-bar input {
@@ -105,7 +105,8 @@ section {
     border: 1px solid #ddd;
     background-color: #f9f8f5; 
     border-radius: 7px;
-    color: #363127;}
+    color: #363127;
+    font-size: 14px;}
 
 /* 帖子样式 */
 .posts {

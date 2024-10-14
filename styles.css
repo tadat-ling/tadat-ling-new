@@ -173,7 +173,7 @@ body {
 /* Mobile screen style (for screens smaller than 1200px and 768px) */
 @media (max-width: 1200px) {
   section {
-    max-width: 80%; /* 在较小屏幕上，内容占据 80% 的宽度 */
+    max-width: 70%; /* 在较小屏幕上，内容占据 70% 的宽度 */
   }
 }
 

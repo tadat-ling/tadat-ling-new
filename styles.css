@@ -96,7 +96,7 @@ section {
 .search-bar {
     display: flex;
     justify-content: center;
-    margin: 20px auto;
+    margin: 20px 20px 20px 35px;
     width: 50%; /* 设定相同的宽度 */}
 
 .search-bar input {
@@ -112,7 +112,7 @@ section {
 .posts {
     display: flex;
     justify-content: center;
-    margin: 20px auto; /* 与 search-bar 相同 */
+    margin: 20px 20px 20px 20px
     width: 50%; /* 确保 posts 容器宽度与 search-bar 一致 */}
 
 .post {

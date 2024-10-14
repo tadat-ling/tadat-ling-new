@@ -221,7 +221,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* 让 section 填满屏幕高度 */
+    height: 50vh; /* 让 section 填满屏幕高度 */
     background-color: #f4f4f4; /* 可以根据需要更改背景色 */
 }
 

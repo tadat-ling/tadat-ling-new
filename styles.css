@@ -180,6 +180,23 @@ body {
   }
 }
 
+@media (max-width: 1000px) {
+    nav ul {
+        display: block; /* Stack the items vertically */
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 15px 0; /* Add space between the items */
+    }
+  section {
+    max-width: 70%; /* 在较小屏幕上，内容占据 70% 的宽度 */
+  }
+    
+}
+
 @media (max-width: 768px) {
     nav ul {
         display: block; /* Stack the items vertically */
@@ -189,7 +206,7 @@ body {
     nav ul li {
         display: block;
         text-align: center;
-        margin: 10px 0; /* Add space between the items */
+        margin: 13px 0; /* Add space between the items */
     }
     
     section {

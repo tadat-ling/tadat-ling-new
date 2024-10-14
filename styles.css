@@ -102,7 +102,7 @@ section {
 .search-bar input {
     width: 100%; /* 让输入框充满 search-bar 容器 */
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #f0ede6;
     border-radius: 4px;}
 
 /* 帖子样式 */
@@ -157,7 +157,7 @@ section {
 /* Footer styling */
 footer {
   background-color: #363127;
-  color: white;
+  color: #f0ede6;
   text-align: center;
   padding: 10px 0;
   position: fixed;

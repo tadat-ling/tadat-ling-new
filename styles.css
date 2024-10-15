@@ -227,7 +227,7 @@ body {
 .feedback-form {
     width: 50%;
     max-width: 1200px;
-    margin-top: 50px; /* Đẩy box xuống thấp hơn */
+    margin: 100px 100px; /* Đẩy box xuống thấp hơn */
     background: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -242,7 +242,6 @@ body {
     padding: 10px; /* 内边距 */
     border: 1px solid #ccc; /* 边框 */
     border-radius: 4px; /* 圆角 */
-    margin: 15px 15px 15px; /* 底部间距 */
     resize: none; /* 禁用大小调整 */
 }
 
@@ -251,7 +250,6 @@ body {
     padding: 10px; /* 内边距 */
     border: 1px solid #ccc; /* 边框 */
     border-radius: 4px; /* 圆角 */
-    margin: 15px 15px 15px; /* 底部间距 */
 }
 
 .feedback-form button {

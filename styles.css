@@ -221,16 +221,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh; /* 让 section 填满屏幕高度 */
+    height: 50vh;
+    margin-top: 50px; /* Đẩy box xuống thấp hơn */
 }
 
 .feedback-form {
-    width: 50%; /* 默认占屏幕总面积的50% */
-    max-width: 1200px; /* 最大宽度为1200px */
-    margin: 0 auto; /* 中心对齐 */
-    background: #fff; /* 背景颜色为白色 */
-    padding: 20px; /* 内边距 */
-    border-radius: 8px; /* 圆角 */
+    width: 50%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; /* Căn chỉnh các thành phần theo cột */
+    gap: 15px; /* Khoảng cách giữa các phần */
 }
 
 .feedback-form textarea {

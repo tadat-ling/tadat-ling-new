@@ -229,15 +229,15 @@ body {
 
 .feedback-form {
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 40px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    max-width: 600px; /* Giới hạn chiều rộng của form */
+    margin: 30px auto 0; /* Căn giữa form và cách header 30px */
+    background: #fff; /* Màu nền trắng cho form */
+    padding: 40px 20px; /* Khoảng cách bên trong */
+    border-radius: 10px; /* Bo tròn góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+    display: flex; /* Sử dụng flexbox để sắp xếp */
+    flex-direction: column; /* Sắp xếp các phần tử theo cột */
+    gap: 20px; /* Khoảng cách giữa các phần tử */
 }
 
 .feedback-form textarea {

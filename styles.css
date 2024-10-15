@@ -222,7 +222,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh; /* Tăng chiều cao để header không bị che */
+    height: 30vh; /* Tăng chiều cao để header không bị che */
     padding-top: 60px; /* Giữ khoảng cách phía trên header */
     background-color: #f9f8f5;
 }

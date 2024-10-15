@@ -219,23 +219,19 @@ body {
 
 /* Feedback Section */
 #feedback {
-    display: flex;
     justify-content: center;
-    align-items: center;
     height: 30vh; /* Tăng chiều cao để header không bị che */
     margin: 50px 100px;
     padding: 12px; /* Giữ khoảng cách phía trên header */
-    background-color: #f9f8f5;
+    background-color: #ddd;
 }
 
 .feedback-form {
     width: 100%;
     max-width: 600px; /* Giới hạn chiều rộng của form */
-    margin: 20px 20px 20px; /* Căn giữa form và cách header 30px */
+    margin: 20px 20px 20px;
     padding: 12px; /* Khoảng cách bên trong */
     border-radius: 10px; /* Bo tròn góc */
-    display: flex; /* Sử dụng flexbox để sắp xếp */
-    flex-direction: column; /* Sắp xếp các phần tử theo cột */
     gap: 20px; /* Khoảng cách giữa các phần tử */
 }
 
@@ -259,6 +255,8 @@ body {
 
 .feedback-form button {
     width: 100%;
+    margin: 20px 100px;
+    
     padding: 12px;
     background-color: #2c2c2c;
     color: white;

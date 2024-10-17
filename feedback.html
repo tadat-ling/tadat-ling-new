@@ -23,35 +23,12 @@
     <h1>Feedback</h1>
   </header>
 
-<!-- Personal Content Section -->
-<section id="feedback">
-  <div class="feedback-form">
-    <form id="feedbackForm">
-      <textarea id="feedback" required placeholder="Enter your feedback"></textarea>
-      <input type="email" id="email" required placeholder="Enter your email">
-      <button type="submit">Send</button>
-    </form>
+  <!-- Personal Content Section -->
+  <div style="margin-top: 30px; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
+    <textarea placeholder="Enter your feedback..." rows="5" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+    <input type="email" placeholder="Enter your email..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; margin-top: 10px;" required>
+    <button type="submit" style="background-color: darkgray; color: white; padding: 10px 15px; border: none; border-radius: 5px; margin-top: 10px; cursor: pointer;">SEND</button>
   </div>
-</section>
-
-    <script>
-        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // 阻止表单默认行为
-
-            // 获取用户的反馈和邮件地址
-            const feedback = document.getElementById('feedback').value;
-            const email = document.getElementById('email').value;
-
-            // 收件人
-            const recipients = "datbg.0702@gmail.com,wenda.27@icloud.com";
-
-            // 使用 mailto 来生成邮件
-            const mailtoLink = `mailto:${recipients}?subject=Feedback&body=${encodeURIComponent(feedback)}%0A%0AFrom: ${encodeURIComponent(email)}`;
-
-            // 打开邮件客户端
-            window.location.href = mailtoLink;
-        });
-    </script>
 
   <!-- Footer Section -->
   <footer>

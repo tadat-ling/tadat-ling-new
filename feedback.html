@@ -4,17 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feedback - Dat Ta</title>
-  <link rel="stylesheet" href="styles.css">
   <style>
     .feedback-container {
       margin-top: 30px;
       padding: 20px;
       border: 1px solid #ccc;
       border-radius: 5px;
-      width: 50%; /* Default width for desktop */
-      max-width: 600px; /* Optional max width */
+      width: 50%; /* Default width cho desktop */
+      max-width: 600px; /* Giới hạn chiều rộng tối đa */
       margin-left: auto;
-      margin-right: auto;
+      margin-right: auto; /* Căn giữa container */
+      box-sizing: border-box; /* Đảm bảo padding không thay đổi kích thước */
+    }
+
+    textarea, input[type="email"], button {
+      width: 100%; /* Đảm bảo phần tử con chiếm hết chiều rộng container */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: darkgray;
+      color: white;
+      border: none;
+      cursor: pointer;
     }
 
     @media (max-width: 768px) { /* Tablets */
@@ -50,9 +66,9 @@
   <!-- Personal Content Section -->
   <div class="feedback-container">
     <form id="feedbackForm">
-      <textarea name="feedback" placeholder="Enter your feedback..." rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
-      <input type="email" name="email" placeholder="Enter your email..." required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; margin-top: 10px;">
-      <button type="submit" style="background-color: darkgray; color: white; padding: 10px 15px; border: none; border-radius: 5px; margin-top: 10px; cursor: pointer;">SEND</button>
+      <textarea name="feedback" placeholder="Enter your feedback..." rows="5" required></textarea>
+      <input type="email" name="email" placeholder="Enter your email..." required>
+      <button type="submit">SEND</button>
       <div id="successMessage" style="display: none; margin-top: 10px; color: green;">Sent successfully</div>
     </form>
   </div>

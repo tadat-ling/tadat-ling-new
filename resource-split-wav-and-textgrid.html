@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Wav and TextGrid - Dat Ta</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function loadComponent(id, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => document.getElementById(id).innerHTML = data)
+                .catch(error => console.error(`Error loading ${url}:`, error));
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            loadComponent("nav-placeholder", "nav.html");
+            loadComponent("footer-placeholder", "footer.html");
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Navigation Section -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Split Wav and TextGrid</h1>
+    </header>
+
+    <!-- Personal Content Section -->
+    <section id="demo">
+        <div>
+            <p>Split Wav and TextGrid <a href="Split_Wav_and_TextGrid.zip" download>Download</a></p>
+            <h2>Program Overview</h2>
+            <p>This program helps you split an audio file and its corresponding TextGrid file into separate smaller files based on a selected tier in the TextGrid.</p>
+            <p>You are advised to run this program on <b>MATLAB 2020b</b> or later to ensure stable operation, and to install the <b>Audio Toolbox</b> and <b>Signal Processing Toolbox</b>.</p>
+        
+            <h2>How It Works</h2>
+            <p>For example, in your TextGrid file, the topmost tier (e.g., named <i>"syllable"</i>) marks entire syllables, while the following tiers mark segments and selected parts for analysis.</p>
+            <p>This program uses the <i>"syllable"</i> tier as a reference to split both the WAV and TextGrid files into smaller files, which are then saved using the label from <b>Tier 1</b> of the extracted interval.</p>
+        
+            <h2>Instructions</h2>
+            <ol>
+                <li>Open the script <code>split_wav_annotate.m</code> and click <b>RUN</b>.</li>
+                <li>Select the <b>*.wav</b> file.</li>
+                <li>Select the corresponding <b>*.TextGrid</b> file.</li>
+                <li>Choose the output folder.</li>
+                <li>Enter the tier name to use as the reference for splitting (default: <i>"syllable"</i>).</li>
+                <li>Click <b>OK</b> and wait for the process to complete.</li>
+            </ol>
+        
+            <p>🎉 <b>Congratulations!</b> Your files have been successfully split! 🎉</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>
